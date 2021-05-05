@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>Hello, world!</title>
+
+    <style>
+      .w-65{
+        width: 65%;
+      }
+      .bigdropdown{
+        width: 90%;
+        left: 4%!important;
+        padding: 20px 25px;
+      }
+      .scrolled {
+        background-color: #0F295E !important;
+      }
+      .primary-color-albatros{
+        background: #0F295E !important;
+        color: white!important;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .primary-color-albatros.dropdown-menu a{
+          color: #FFFFFF !important;
+      }
+
+      .mediumdropdown{
+        width: 50%;
+        left: 4%!important;
+        padding: 20px 25px;
+      }
+
+      #tabs{
+        top: -44px;
+        background: transparent;
+        border: none;
+      }
+
+      .ui-widget-header{
+        border: none;
+        background-color: transparent;
+      }
+
+      .ui-state-default {
+        background-color: white!important;
+        color: #001942!important;
+        border: 1px solid white!important;
+      }
+      .ui-state-default.ui-state-active {
+        background-color: #001942!important;
+        color: white!important;
+        border: 1px solid #001942!important;
+      }
+
+      .ui-tabs-panel{
+        border-width: 1px!important;
+        background-color:  white!important;
+      }
+
+      .ui-tabs .ui-tabs-nav{
+        padding: .2em 1.2em 0;
+      }
+
+      .btn-albatros{
+        background-color: #001942;
+        border-radius: 0;
+        color: white;
+      }
+
+
+      /* slick */
+      .slick-prev{
+        top: 59%;
+        position: absolute;
+        z-index: 1;
+        background: transparent;
+        border: none;
+        color: white;
+        left: 3%;
+        font-size: 30px;
+      }
+      
+      .slick-next{
+        top: 59%;
+        position: absolute;
+        z-index: 1;
+        background: transparent;
+        border: none;
+        color: white;
+        right: 3%;
+        font-size: 30px;
+      }
+
+      @media (max-width: 575.98px) {
+        .bigdropdown{
+          height: auto;
+          max-height: 500px;
+          overflow-x: hidden;
+          width: 100%;
+        }
+
+        .navbar-toggler>.close {
+        display:inline;
+        }
+        .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+        display:none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-albatros">
+      <div class="container-xxl">
+
+        <!-- elementos de responsive/mobile -->
+        <ul class="navbar-nav my-lg-0 float-start d-flex flex-row d-sm-none">
+          <li class="nav-item pe-4"><img src="Albatros.png" alt=""  style="width: 120px;"></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="flag-icon flag-icon-us"></i>
+            </a>
+            <ul class="dropdown-menu primary-color-albatros position-absolute" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a></li>
+              <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> Francés</a></li>
+              <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Emmanuel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+          <span class="navbar-toggler-icon"></span>
+          <span class="my-1 mx-2 close">X</span>
+        </button>
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <div class="row w-100">
+
+            <div class="col-12 text-white d-none d-sm-block">
+              <div class="container">
+                <ul class="navbar-nav align-items-center flex-row my-lg-0 float-sm-start float-md-end">
+                  <li class="nav-item dropdown pe-4 pe-lg-2 ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      MXN
+                    </a>
+                    <ul class="dropdown-menu primary-color-albatros" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">USD</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown d-none d-sm-block text-white">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="flag-icon flag-icon-us"></i>
+                    </a>
+                    <ul class="dropdown-menu primary-color-albatros" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> China</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 d-none d-none d-sm-block">
+              <hr class="text-white">
+            </div>
+
+            <div class="col-12">
+              <div class="container-xxl">
+                <ul class="navbar-nav align-items-lg-center me-auto mb-2 mb-lg-0">
+                  <li class="nav-item w-65">
+                    <img src="Albatros.png" alt="" class="d-none d-sm-block" style="width: 200px;">
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Nuestras experiencias
+                    </a>
+                    <div class="dropdown-menu bigdropdown primary-color-albatros m-0" aria-labelledby="navbarDropdown2" >
+                        <div class="row">
+                          <div class="col-12 col-sm-3">
+                            <div class="row">
+                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                              <div class="col-12 col-lg-6">
+                                <label>Alimentos</label>
+                                <h1>Albatros</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                  pretium.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="row">
+                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                              <div class="col-12 col-lg-6">
+                                <label>Alimentos</label>
+                                <h1>Albatros</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                  pretium.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="row">
+                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                              <div class="col-12 col-lg-6">
+                                <label>Alimentos</label>
+                                <h1>Albatros</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                  pretium.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="row">
+                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                              <div class="col-12 col-lg-6">
+                                <label>Alimentos</label>
+                                <h1>Albatros</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                  pretium.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Promociones</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Galeria
+                    </a>
+                    <div class="dropdown-menu mediumdropdown primary-color-albatros" aria-labelledby="navbarDropdown">
+                      <span>askdjaklsd</span>
+                    </div>
+                  </li>
+
+                  <li class="nav-item dropdown pe-4 pe-lg-2 d-block d-sm-none">
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                      <button type="button" class="btn btn-outline-light">MXN</button>
+                      <button type="button" class="btn btn-outline-light">USD</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>  
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    
+    <div class="your-class">
+      <div><img src="photo.jpg" style="width: 100%"></div>
+      <div><img src="Platino2.jpg" style="width: 100%"></div>
+      <div><img src="Screenshot_3.jpg" style="width: 100%"></div>
+    </div>
+
+    
+
+  
+  <div id="tabs">      
+      <div class="container">
+        <ul>
+          <li><a href="#tabs-1">Albatros</a></li>
+          <li><a href="#tabs-2">Restaurantes</a></li>
+        </ul>
+        <div id="tabs-1">
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-5">
+              <select class="form-select rounded-0" aria-label="Default select example">
+                <option selected>Selecciona un tour</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 mt-3 mt-md-0 mb-md-0">
+              <div class="row">
+                <div class="col-6">
+                  <select class="form-select rounded-0" aria-label="Default select example">
+                    <option selected>Adultos</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-select rounded-0" aria-label="Default select example">
+                    <option selected>Niños</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-2 mt-3 mt-md-0 mb-md-0">
+              <input type="date" id="start" name="trip-start" class="form-select rounded-0">
+            </div>
+            <div class="col-12 col-md-2 mt-3 mt-md-0 mb-md-0">
+              <button type="button" class="btn btn-albatros w-100">Info</button>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-2">
+          <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet pretium. Aliquam ac viverra nisi. Ut interdum rutrum massa eu rutrum. Aliquam scelerisque ullamcorper pellentesque. Proin ut volutpat orci, ut vestibulum dolor. Nunc nec risus sit amet turpis lobortis auctor. Sed blandit massa id lacus viverra rutrum. Mauris ut mi interdum, commodo libero non, tincidunt lorem. Vivamus vitae ante at neque maximus malesuada in nec lectus. Integer vel mattis mi. Nullam nec iaculis velit. Aliquam sed euismod metus. Quisque sed sapien bibendum, tristique sem ut, pellentesque nunc. Maecenas nec blandit massa.
+  
+        Morbi mauris est, lacinia sed dolor eu, finibus aliquam justo. Etiam imperdiet volutpat mauris, non rhoncus purus rutrum quis. Donec lacinia mauris vel augue fringilla, id aliquam mauris blandit. Quisque ornare gravida massa, tempus placerat neque tincidunt ullamcorper. Suspendisse rutrum lorem augue. Praesent mollis dictum sem, non ornare tortor porta ac. Aenean semper purus nec augue facilisis ornare. Vivamus lobortis, lectus sed varius accumsan, turpis felis ornare nisl, et luctus eros ante eget erat.
+  
+        Phasellus leo quam, ultricies nec dolor ut, congue consectetur massa. Donec at molestie risus. Maecenas ultrices at purus et scelerisque. Pellentesque ac mi facilisis, pharetra enim ac, posuere mi. Morbi gravida ut odio quis condimentum. Curabitur ultrices lacinia risus in elementum. Pellentesque sollicitudin, leo vitae mollis porttitor, dolor felis volutpat est, ac faucibus urna leo a velit. Phasellus id ultricies erat, bibendum condimentum enim. Ut in gravida diam. Nulla pulvinar eget tortor sit amet porta. Maecenas et neque non ante condimentum mollis. Nulla non leo leo. Phasellus nec pharetra massa. Cras a magna magna. Quisque vel lacinia est, maximus viverra est. Integer eget neque sit amet risus mattis placerat.
+  
+        Aliquam dignissim nisl et diam malesuada vehicula. Morbi nec luctus lacus, et auctor mi. Aliquam sed eros at est sollicitudin consectetur. Nulla facilisi. Donec mauris augue, convallis dignissim consectetur eu, placerat sit amet urna. Sed varius enim id lacus porta, eu vulputate dui ornare. Ut sit amet odio at justo finibus auctor. Ut rhoncus at leo ultrices tristique. Aenean sapien elit, imperdiet in arcu sed, commodo luctus nunc. Maecenas nec lacus lectus. Duis ac lorem fermentum, accumsan mauris sed, pretium augue. Duis consectetur massa nulla, nec fermentum tortor sollicitudin in. Integer velit tellus, volutpat ac sapien eu, aliquam vehicula lectus. Etiam sed orci dui. Nunc facilisis ac tortor placerat rhoncus.
+  
+        Maecenas rutrum odio justo, a ullamcorper felis imperdiet quis. Phasellus laoreet tempor tristique. Sed ultrices consequat semper. Sed bibendum auctor dolor eget dapibus. Vivamus volutpat nunc ipsum. Aliquam feugiat maximus nibh ac varius. Curabitur fringilla fringilla mauris, eu ultricies lorem egestas ac. Aliquam scelerisque, ipsum vitae vehicula lacinia, lorem augue faucibus nulla, ac consectetur eros lorem sit amet risus. Proin pulvinar condimentum semper. Quisque eu semper massa, a consequat sem. Nullam lacinia enim vitae libero dapibus accumsan. Fusce ac enim enim. Aliquam ultricies est nec ex tristique tincidunt. Integer efficitur convallis pretium.
+  
+        Generated 5 paragraphs, 490 words, 3328 bytes of Lorem ipsum
+      </p>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" integrity="sha512-kHKdovQFIwzs2NABJSo9NgJKZOrRqLPSoqIumoCkaIytTRGgsddo7d0rFyyh8RvYyNNKcMF7C9+4sM7YhMylgg==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <script>
+      $( document ).ready(function() {
+        $('.your-class').slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fas fa-arrow-circle-left'></i></button>",
+          nextArrow:"<button type='button' class='slick-next pull-right'><i class='fas fa-arrow-circle-right'></i></button>"
+        });
+
+        $( "#tabs" ).tabs();
+
+        $( document ).scroll(function() {
+          var navbar = $(".navbar-albatros");
+          // if($(this).scrollTop() > navbar.height()){
+          //   $(".navbar-collapse").removeClass('show');
+          // }
+          
+          navbar.toggleClass("scrolled", $(this).scrollTop() > navbar.height());
+        });
+
+        $(".navbar-toggler").click(function(){
+           $(".navbar-albatros").addClass("scrolled");      
+        })
+      });
+    </script>
+  </body>
+</html>
