@@ -1,19 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;1,400;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="flag-icon-css/flag-icon.min.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <title>Hello, world!</title>
+    <title>Albatros</title>
 
     <style>
+      body{
+        font-family: 'Red Hat Display', sans-serif;
+      }
+
+      .albatros-paragraph{
+        font-size: 18px;
+      }
       .w-65{
         width: 65%;
       }
@@ -79,6 +88,11 @@
         color: white;
       }
 
+      .navbar-dark .navbar-nav .nav-link{
+        color: white;
+        font-weight: bold;
+      }
+
 
       /* slick */
       .slick-prev{
@@ -103,6 +117,92 @@
         font-size: 30px;
       }
 
+      .bandage{
+        width: 100%;
+        background: url(bandage.jpg),#009335;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 75px;
+      }
+
+      .accom-albatros{
+        color: #0F295E;
+      }
+
+      .accom-albatros span{
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .accom-albatros i{
+        font-size: 30px;
+      }
+
+      .box{
+        color: white!important;
+        text-shadow: 2px 2px black;
+        font-weight: bold;
+      }
+      .title-box{
+        font-size: 24px;
+      }
+      .sub-box{
+        font-size: 16px;
+      }
+      .people-box{
+        font-size: 12px;
+      }
+
+      .content-text{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom,rgba(0,0,0,.0002) 0%,rgba(0,0,0,.6) 100%);
+        text-align: center;
+        background-color: rgba(0,0,0,.5);
+      }
+
+      .content-text:hover{
+        background:none;
+      }
+      .table_generic {
+        display: table;
+      }
+
+      .tb-col{
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      #page-container {
+        position: relative;
+        min-height: 100vh;
+      }
+
+      #content-wrap {
+        padding-bottom: 11rem; 
+      }
+
+      #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-height: 11rem;
+        background-color: #0F295E;
+        color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      #footer a{
+        color: white!important;
+      }
+      #footer i{
+        font-size: 30px;
+      }
+
+
       @media (max-width: 575.98px) {
         .bigdropdown{
           height: auto;
@@ -110,260 +210,400 @@
           overflow-x: hidden;
           width: 100%;
         }
-
         .navbar-toggler>.close {
         display:inline;
         }
         .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
         display:none;
         }
+        .title-box{
+          font-size: 14px;
+        }
+        .sub-box{
+          font-size: 12px;
+        }
+        .people-box{
+          font-size: 10px;
+        }
+        #content-wrap {
+          padding-bottom: 15rem; 
+        }
+        #footer {
+          max-height: 15rem;
+        }
+
+        .accom-albatros span{
+          font-size: 18px;
+        }
+
+        .accom-albatros i{
+          font-size: 25px;
+        }
       }
+
+      
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-albatros">
-      <div class="container-xxl">
 
-        <!-- elementos de responsive/mobile -->
-        <ul class="navbar-nav my-lg-0 float-start d-flex flex-row d-sm-none">
-          <li class="nav-item pe-4"><img src="Albatros.png" alt=""  style="width: 120px;"></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="flag-icon flag-icon-us"></i>
-            </a>
-            <ul class="dropdown-menu primary-color-albatros position-absolute" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a></li>
-              <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> Francés</a></li>
-              <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Emmanuel</a></li>
+    <div id="page-container">
+      <div id="content-wrap">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-albatros">
+          <div class="container-xxl">
+    
+            <!-- elementos de responsive/mobile -->
+            <ul class="navbar-nav my-lg-0 float-start d-flex flex-row d-sm-none">
+              <li class="nav-item pe-4"><img src="Albatros.png" alt=""  style="width: 120px;"></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="flag-icon flag-icon-us"></i>
+                </a>
+                <ul class="dropdown-menu primary-color-albatros position-absolute" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> Francés</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Emmanuel</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          
-          <span class="navbar-toggler-icon"></span>
-          <span class="my-1 mx-2 close">X</span>
-        </button>
-        
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <div class="row w-100">
-
-            <div class="col-12 text-white d-none d-sm-block">
-              <div class="container">
-                <ul class="navbar-nav align-items-center flex-row my-lg-0 float-sm-start float-md-end">
-                  <li class="nav-item dropdown pe-4 pe-lg-2 ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      MXN
-                    </a>
-                    <ul class="dropdown-menu primary-color-albatros" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">USD</a></li>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              
+              <span class="navbar-toggler-icon"></span>
+              <span class="my-1 mx-2 close">X</span>
+            </button>
+            
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+              <div class="row w-100">
+    
+                <div class="col-12 text-white d-none d-sm-block">
+                  <div class="container">
+                    <ul class="navbar-nav align-items-center flex-row my-lg-0 float-sm-start float-md-end">
+                      <li class="nav-item dropdown pe-4 pe-lg-2 ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          MXN
+                        </a>
+                        <ul class="dropdown-menu primary-color-albatros" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">USD</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown d-none d-sm-block text-white">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="flag-icon flag-icon-us"></i>
+                        </a>
+                        <ul class="dropdown-menu primary-color-albatros" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> China</a></li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                  <li class="nav-item dropdown d-none d-sm-block text-white">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="flag-icon flag-icon-us"></i>
-                    </a>
-                    <ul class="dropdown-menu primary-color-albatros" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> China</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-12 d-none d-none d-sm-block">
-              <hr class="text-white">
-            </div>
-
-            <div class="col-12">
-              <div class="container-xxl">
-                <ul class="navbar-nav align-items-lg-center me-auto mb-2 mb-lg-0">
-                  <li class="nav-item w-65">
-                    <img src="Albatros.png" alt="" class="d-none d-sm-block" style="width: 200px;">
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Nuestras experiencias
-                    </a>
-                    <div class="dropdown-menu bigdropdown primary-color-albatros m-0" aria-labelledby="navbarDropdown2" >
-                        <div class="row">
-                          <div class="col-12 col-sm-3">
+                  </div>
+                </div>
+    
+                <div class="col-12 d-none d-none d-sm-block">
+                  <hr class="text-white">
+                </div>
+    
+                <div class="col-12">
+                  <div class="container">
+                    <ul class="navbar-nav align-items-lg-center me-auto mb-2 mb-lg-0">
+                      <li class="nav-item w-65">
+                        <img src="Albatros.png" alt="" class="d-none d-sm-block" style="width: 200px;">
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Nuestras experiencias
+                        </a>
+                        <div class="dropdown-menu bigdropdown primary-color-albatros m-0" aria-labelledby="navbarDropdown2" >
                             <div class="row">
-                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
-                              <div class="col-12 col-lg-6">
-                                <label>Alimentos</label>
-                                <h1>Albatros</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
-                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
-                                  pretium.</p>
+                              <div class="col-12 col-sm-3">
+                                <div class="row">
+                                  <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                                  <div class="col-12 col-lg-6">
+                                    <label>Alimentos</label>
+                                    <h1>Albatros</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                      convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                      pretium.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-3">
+                                <div class="row">
+                                  <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                                  <div class="col-12 col-lg-6">
+                                    <label>Alimentos</label>
+                                    <h1>Albatros</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                      convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                      pretium.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-3">
+                                <div class="row">
+                                  <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                                  <div class="col-12 col-lg-6">
+                                    <label>Alimentos</label>
+                                    <h1>Albatros</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                      convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                      pretium.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-3">
+                                <div class="row">
+                                  <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
+                                  <div class="col-12 col-lg-6">
+                                    <label>Alimentos</label>
+                                    <h1>Albatros</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
+                                      convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
+                                      pretium.</p>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="col-12 col-sm-3">
-                            <div class="row">
-                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
-                              <div class="col-12 col-lg-6">
-                                <label>Alimentos</label>
-                                <h1>Albatros</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
-                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
-                                  pretium.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-3">
-                            <div class="row">
-                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
-                              <div class="col-12 col-lg-6">
-                                <label>Alimentos</label>
-                                <h1>Albatros</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
-                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
-                                  pretium.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-3">
-                            <div class="row">
-                              <div class="col-12 col-lg-6"><img src="albatros.jpg" alt="albatros" style="height: 50px;"></div>
-                              <div class="col-12 col-lg-6">
-                                <label>Alimentos</label>
-                                <h1>Albatros</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis
-                                  convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet
-                                  pretium.</p>
-                              </div>
-                            </div>
-                          </div>
                         </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Promociones</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Galeria
-                    </a>
-                    <div class="dropdown-menu mediumdropdown primary-color-albatros" aria-labelledby="navbarDropdown">
-                      <span>askdjaklsd</span>
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown pe-4 pe-lg-2 d-block d-sm-none">
-                    <div class="btn-group" role="group" aria-label="Basic outlined example">
-                      <button type="button" class="btn btn-outline-light">MXN</button>
-                      <button type="button" class="btn btn-outline-light">USD</button>
-                    </div>
-                  </li>
-                </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Promociones</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Galeria
+                        </a>
+                        <div class="dropdown-menu mediumdropdown primary-color-albatros" aria-labelledby="navbarDropdown">
+                          <span>askdjaklsd</span>
+                        </div>
+                      </li>
+    
+                      <li class="nav-item dropdown pe-4 pe-lg-2 d-block d-sm-none">
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                          <button type="button" class="btn btn-outline-light">MXN</button>
+                          <button type="button" class="btn btn-outline-light">USD</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>  
               </div>
-            </div>  
-          </div>
-
-        </div>
-      </div>
-    </nav>
-
     
-    <div class="your-class">
-      <div><img src="photo.jpg" style="width: 100%"></div>
-      <div><img src="Platino2.jpg" style="width: 100%"></div>
-      <div><img src="Screenshot_3.jpg" style="width: 100%"></div>
-    </div>
-
-    
-
-  
-  <div id="tabs">      
-      <div class="container">
-        <ul>
-          <li><a href="#tabs-1">Albatros</a></li>
-          <li><a href="#tabs-2">Restaurantes</a></li>
-        </ul>
-        <div id="tabs-1">
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-5">
-              <select class="form-select rounded-0" aria-label="Default select example">
-                <option selected>Selecciona un tour</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
             </div>
-            <div class="col-12 col-md-3 col-lg-3 mt-3 mt-md-0 mb-md-0">
+          </div>
+        </nav>
+    
+        <!-- carrousel -->
+        <div class="your-class">
+          <div><img src="photo.jpg" style="width: 100%"></div>
+          <div><img src="Platino2.jpg" style="width: 100%"></div>
+          <div><img src="Screenshot_3.jpg" style="width: 100%"></div>
+        </div>
+    
+        <!-- caja de reservación -->
+        <div id="tabs">
+          <div class="container">
+            <ul>
+              <li><a href="#tabs-1">Albatros</a></li>
+              <li><a href="#tabs-2">Restaurantes</a></li>
+            </ul>
+            <div id="tabs-1">
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-md-4 col-lg-5">
                   <select class="form-select rounded-0" aria-label="Default select example">
-                    <option selected>Adultos</option>
+                    <option selected>Selecciona un tour</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
                 </div>
-                <div class="col-6">
-                  <select class="form-select rounded-0" aria-label="Default select example">
-                    <option selected>Niños</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                <div class="col-12 col-md-3 col-lg-3 mt-3 mt-md-0 mb-md-0">
+                  <div class="row">
+                    <div class="col-6">
+                      <select class="form-select rounded-0" aria-label="Default select example">
+                        <option selected>Adultos</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select rounded-0" aria-label="Default select example">
+                        <option selected>Niños</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3 col-lg-2 mt-3 mt-md-0 mb-md-0">
+                  <input type="date" id="start" name="trip-start" class="form-select rounded-0">
+                </div>
+                <div class="col-12 col-md-2 mt-3 mt-md-0 mb-md-0">
+                  <button type="button" class="btn btn-albatros w-100">Info</button>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-3 col-lg-2 mt-3 mt-md-0 mb-md-0">
-              <input type="date" id="start" name="trip-start" class="form-select rounded-0">
-            </div>
-            <div class="col-12 col-md-2 mt-3 mt-md-0 mb-md-0">
-              <button type="button" class="btn btn-albatros w-100">Info</button>
+            <div id="tabs-2">
+              <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc.
+                Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut
+                tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam.
+                Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean
+                vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus
+                pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur
+                tortor et purus.</p>
             </div>
           </div>
         </div>
-        <div id="tabs-2">
-          <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+    
+        <div class="container">
+            <h3 class="text-center mb-5 fw-bold">¿Por qué reservar con nosotros?</h3>
+            <p class="mt-2 mb-5 albatros-paragraph">
+              Somos una empresa 100% Mexicana con más de 20 años de experiencia.
+              <br><br>
+              Hemos incursionado en diferentes segmentos de mercado, logrando ofrecer a nuestros visitantes extranjeros,
+              nacionales y locales un gran abanico de servicios e innovadores conceptos en diferentes ámbitos, como náutico,
+              turísticos, restauranteros y de entretenimiento.
+            </p>
+    
+            <div class="row text-center">
+              <div class="col-6 col-md-3 accom-albatros"><i class="fas fa-dollar-sign mb-3"></i> <span class="d-block">Mejor precio garantizado</span></div>
+              <div class="col-6 col-md-3 accom-albatros"><i class="fas fa-thumbs-up mb-3"></i><span class="d-block">Actividades diseñados por nosotros</span></div>
+              <div class="col-6 col-md-3 accom-albatros mt-4 mt-md-0"><i class="fas fa-heart mb-3"></i><span class="d-block">Más de 5000 clientes</span></div>
+              <div class="col-6 col-md-3 accom-albatros mt-4 mt-md-0"><i class="fas fa-star mb-3"></i><span class="d-block">Agencia galardonada</span></div>
+            </div>
+        </div>
+    
+        <div class="bandage mt-5 mb-5"></div>
+    
+        <div class="container">
+            <h3 class="text-center mb-3 fw-bold">¿NO ESTÁS SEGURO AÚN? EXPLORA UN POCO</h3>
+            <p class="mb-5 albatros-paragraph text-center">
+              NUESTROS SERVICIOS
+            </p>
+    
+            <div class="row mt-5 mb-3">
+              <div class="col-6 col-md-4">
+                <a href="#" style="    width: 100%; position: relative;display: block;">
+                  <img src="albatros-box.jpg" alt="albatros" style="width: 100%; height: 100%;">
+                  <div class="table_generic content-text">
+                    <div class="tb-col">
+                      <h3 class="box title-box">Albatros</h3>
+                      <p class="box sub-box mb-1">DESDE $1,999 MXN</p>
+                      <p class="box people-box">por persona</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4">
+                <a href="#" style="    width: 100%; position: relative;display: block;">
+                  <img src="albatros-box.jpg" alt="albatros" style="width: 100%; height: 100%;">
+                  <div class="table_generic content-text">
+                    <div class="tb-col">
+                      <h3 class="box title-box">Albatros</h3>
+                      <p class="box sub-box mb-1">DESDE $1,999 MXN</p>
+                      <p class="box people-box">por persona</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 mt-3 mt-md-0">
+                <a href="#" style="    width: 100%; position: relative;display: block;">
+                  <img src="albatros-box.jpg" alt="albatros" style="width: 100%; height: 100%;">
+                  <div class="table_generic content-text">
+                    <div class="tb-col">
+                      <h3 class="box title-box">Albatros</h3>
+                      <p class="box sub-box mb-1">DESDE $1,999 MXN</p>
+                      <p class="box people-box">por persona</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 mt-3 mb-md-0">
+                <a href="#" style="    width: 100%; position: relative;display: block;">
+                  <img src="albatros-box.jpg" alt="albatros" style="width: 100%; height: 100%;">
+                  <div class="table_generic content-text">
+                    <div class="tb-col">
+                      <h3 class="box title-box">Albatros</h3>
+                      <p class="box sub-box mb-1">DESDE $1,999 MXN</p>
+                      <p class="box people-box">por persona</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 mt-3 mb-md-0">
+                <a href="#" style="    width: 100%; position: relative;display: block;">
+                  <img src="albatros-box.jpg" alt="albatros" style="width: 100%; height: 100%;">
+                  <div class="table_generic content-text">
+                    <div class="tb-col">
+                      <h3 class="box title-box">Albatros</h3>
+                      <p class="box sub-box mb-1">DESDE $1,999 MXN</p>
+                      <p class="box people-box">por persona</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 mt-3 mb-md-0">
+                <a href="#" style="    width: 100%; position: relative;display: block;">
+                  <img src="albatros-box.jpg" alt="albatros" style="width: 100%; height: 100%;">
+                  <div class="table_generic content-text">
+                    <div class="tb-col">
+                      <h3 class="box title-box">Albatros</h3>
+                      <p class="box sub-box mb-1">DESDE $1,999 MXN</p>
+                      <p class="box people-box">por persona</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+
+      </div>
+      <div id="footer" >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-3 mb-2 mb-md-0">
+             <div class="row" style="height: 100%;">
+               <div class="col-6 col-md-12"><img src="albatros.png" alt="logo" style="height: 37px;"></div>
+               <div class="col-6 col-md-12 d-flex align-items-end"><p class=" m-0">Copyrigth 2021 </p></div>
+             </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <ul style="list-style: none; padding-left: 0">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Galeria</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4">
+              <address>
+                <a href="mailto:contact@albatraos.com">Contact@albatraos.com</a>.<br>
+                <i class="fab fa-youtube me-2"></i><i class="fab fa-instagram"></i>
+              </address>
+            </div>
+          </div>
         </div>
       </div>
-  </div>
-
-
-
-
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus lobortis convallis. Aliquam feugiat eget sapien sed rhoncus. Aenean congue quis mi sit amet pretium. Aliquam ac viverra nisi. Ut interdum rutrum massa eu rutrum. Aliquam scelerisque ullamcorper pellentesque. Proin ut volutpat orci, ut vestibulum dolor. Nunc nec risus sit amet turpis lobortis auctor. Sed blandit massa id lacus viverra rutrum. Mauris ut mi interdum, commodo libero non, tincidunt lorem. Vivamus vitae ante at neque maximus malesuada in nec lectus. Integer vel mattis mi. Nullam nec iaculis velit. Aliquam sed euismod metus. Quisque sed sapien bibendum, tristique sem ut, pellentesque nunc. Maecenas nec blandit massa.
-  
-        Morbi mauris est, lacinia sed dolor eu, finibus aliquam justo. Etiam imperdiet volutpat mauris, non rhoncus purus rutrum quis. Donec lacinia mauris vel augue fringilla, id aliquam mauris blandit. Quisque ornare gravida massa, tempus placerat neque tincidunt ullamcorper. Suspendisse rutrum lorem augue. Praesent mollis dictum sem, non ornare tortor porta ac. Aenean semper purus nec augue facilisis ornare. Vivamus lobortis, lectus sed varius accumsan, turpis felis ornare nisl, et luctus eros ante eget erat.
-  
-        Phasellus leo quam, ultricies nec dolor ut, congue consectetur massa. Donec at molestie risus. Maecenas ultrices at purus et scelerisque. Pellentesque ac mi facilisis, pharetra enim ac, posuere mi. Morbi gravida ut odio quis condimentum. Curabitur ultrices lacinia risus in elementum. Pellentesque sollicitudin, leo vitae mollis porttitor, dolor felis volutpat est, ac faucibus urna leo a velit. Phasellus id ultricies erat, bibendum condimentum enim. Ut in gravida diam. Nulla pulvinar eget tortor sit amet porta. Maecenas et neque non ante condimentum mollis. Nulla non leo leo. Phasellus nec pharetra massa. Cras a magna magna. Quisque vel lacinia est, maximus viverra est. Integer eget neque sit amet risus mattis placerat.
-  
-        Aliquam dignissim nisl et diam malesuada vehicula. Morbi nec luctus lacus, et auctor mi. Aliquam sed eros at est sollicitudin consectetur. Nulla facilisi. Donec mauris augue, convallis dignissim consectetur eu, placerat sit amet urna. Sed varius enim id lacus porta, eu vulputate dui ornare. Ut sit amet odio at justo finibus auctor. Ut rhoncus at leo ultrices tristique. Aenean sapien elit, imperdiet in arcu sed, commodo luctus nunc. Maecenas nec lacus lectus. Duis ac lorem fermentum, accumsan mauris sed, pretium augue. Duis consectetur massa nulla, nec fermentum tortor sollicitudin in. Integer velit tellus, volutpat ac sapien eu, aliquam vehicula lectus. Etiam sed orci dui. Nunc facilisis ac tortor placerat rhoncus.
-  
-        Maecenas rutrum odio justo, a ullamcorper felis imperdiet quis. Phasellus laoreet tempor tristique. Sed ultrices consequat semper. Sed bibendum auctor dolor eget dapibus. Vivamus volutpat nunc ipsum. Aliquam feugiat maximus nibh ac varius. Curabitur fringilla fringilla mauris, eu ultricies lorem egestas ac. Aliquam scelerisque, ipsum vitae vehicula lacinia, lorem augue faucibus nulla, ac consectetur eros lorem sit amet risus. Proin pulvinar condimentum semper. Quisque eu semper massa, a consequat sem. Nullam lacinia enim vitae libero dapibus accumsan. Fusce ac enim enim. Aliquam ultricies est nec ex tristique tincidunt. Integer efficitur convallis pretium.
-  
-        Generated 5 paragraphs, 490 words, 3328 bytes of Lorem ipsum
-      </p>
     </div>
-    <!-- Optional JavaScript; choose one of the two! -->
+    
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" integrity="sha512-kHKdovQFIwzs2NABJSo9NgJKZOrRqLPSoqIumoCkaIytTRGgsddo7d0rFyyh8RvYyNNKcMF7C9+4sM7YhMylgg==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
+    
     <script>
       $( document ).ready(function() {
         $('.your-class').slick({
